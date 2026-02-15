@@ -25,5 +25,7 @@ begin
   S <= X xor C_i;   --Logic equation for S (Additionally S can be re-written as S <= (A xor B) xor C_i
   C_o <= Y or Z;    --Logic equation for C_o (To break it down into 2 steps: 1). C_o can be written as C_o <= (A and B) or (X and C_i)  2). As X <= A xor B, this concludes that C_o can be written as C_o <= (A and B) or ((A xor B) and C_i)
 
+end behavioural;
+
 --Final: S <= (A xor B) xor C_i
 --Final: C_o <= (A and B) or ((A xor B) and C_i)
