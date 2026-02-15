@@ -16,16 +16,16 @@ architecture behavioural of logic_diagram is
 
 begin
 
-  C_o <= '1' when (A = '0' and B = '1' and C = '1') else
-         '1' when (A = '1' and B = '0' and C = '1') else    --Conditions for C_o to be 1
-         '1' when (A = '1' and B = '1' and C = '0') else
-         '1' when (A = '1' and B = '1' and C = '1') else
+  C_o <= '1' when (A = '0' and B = '1' and C_i = '1') else
+         '1' when (A = '1' and B = '0' and C_i = '1') else    --Conditions for C_o to be 1
+         '1' when (A = '1' and B = '1' and C_i = '0') else
+         '1' when (A = '1' and B = '1' and C_i = '1') else
          '0';   --Default if anything else
 
- S <= '1' when (A = '0' and B = '0' and C = '1') else
-      '1' when (A = '0' and B = '1' and C = '0') else      --Conditions for C_o to be 1
-      '1' when (A = '1' and B = '0' and C = '0') else
-      '1' when (A = '1' and B = '1' and C = '1') else
+ S <= '1' when (A = '0' and B = '0' and C_i = '1') else
+      '1' when (A = '0' and B = '1' and C_i = '0') else      --Conditions for C_o to be 1
+      '1' when (A = '1' and B = '0' and C_i = '0') else
+      '1' when (A = '1' and B = '1' and C_i = '1') else
       '0';    --Default if anything else
   
 end behavioural;
