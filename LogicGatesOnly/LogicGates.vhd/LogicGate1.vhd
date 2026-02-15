@@ -14,7 +14,7 @@ end logic_diagram;
 
 architecture behavioural of logic_diagram is 
 
-  signal X, Y, Z : std_logic --These represent signals because they're outputs and inputs at the same time within the logic gate diagram
+  signal X, Y, Z : std_logic; --These represent signals because they're outputs and inputs at the same time within the logic gate diagram
 
 begin
 
