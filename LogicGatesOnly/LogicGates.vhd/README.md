@@ -38,5 +38,11 @@ S: -This represents the sum
    
    -Hence as a result, we can deduce that S = (X xor Ci)
                                           S = ((A xor B) xor Ci) - in other words.
+
+
+<img width="362" height="402" alt="image" src="https://github.com/user-attachments/assets/7766f982-6dca-40e1-9bba-c1f12a356c63" />
+
+
+Above is the truth table for that circuit.
                                           
 
