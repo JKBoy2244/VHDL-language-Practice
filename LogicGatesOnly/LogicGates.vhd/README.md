@@ -3,9 +3,11 @@
 
 This is a logic diagram example consisting of multiple logic gates within one diagram. 
 
-Inputs: A, B and Ci (Ci represents the carry input)
-Outputs: S and Co
-Signals: X, Y, Z (ones that consist of both inputs and outputs)
+-Inputs: A, B and Ci (Ci represents the carry input)
+
+-Outputs: S and Co
+
+-Signals: X, Y, Z (ones that consist of both inputs and outputs)
 
 We focus on one output at a time.
 
