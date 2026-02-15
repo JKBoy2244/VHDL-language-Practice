@@ -1,7 +1,7 @@
 library IEEE;
 use IEEE.std_logic_1164.all;
 
-entity logic_diagram is 
+entity logic_diagram_output is 
 
   port (
 
@@ -10,9 +10,9 @@ entity logic_diagram is
 
   );
 
-end logic_diagram;
+end logic_diagram_output;
 
-architecture behavioural of logic_diagram is 
+architecture behavioural of logic_diagram_output is 
 
 begin
 
