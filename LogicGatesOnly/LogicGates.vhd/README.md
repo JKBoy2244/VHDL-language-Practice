@@ -3,7 +3,7 @@
 
 This is a logic diagram example consisting of multiple logic gates within one diagram. 
 
-Inputs: A, B and Ci
+Inputs: A, B and Ci (Ci represents the carry input)
 Outputs: S and Co
 Signals: X, Y, Z (ones that consist of both inputs and outputs)
 
@@ -25,7 +25,9 @@ Co:-This represents the carry output.
 
 
 
-S: -It consists of an XOR gate which also contains another XOR gate and Ci too indicated by the junction point 
+S: -This represents the sum 
+
+   -It consists of an XOR gate which also contains another XOR gate and Ci too indicated by the junction point 
     where it either goes to that second XOR gate or straight to the second AND gate
 
    -1st XOR gate consists of A and B as outputs so let's use output X. Hence, X = (A xor B).
