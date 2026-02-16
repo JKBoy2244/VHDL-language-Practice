@@ -46,4 +46,5 @@ S: -This represents the sum
 
 Above is the truth table for that circuit.
                                           
-
+- We notice that S is 1 if exactly 1 out of 3 inputs are 1 (so 2 of them are 0) or all 3 inputs are 1 - it can be any input or any combination.
+- We notice that C_o is  1 if exactly 2 out of 3 inputs are 1 (so 1 of them are 0) or all 3 inputs are 1 - it can be any input or any combination.
