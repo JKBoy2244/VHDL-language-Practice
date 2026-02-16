@@ -10,4 +10,14 @@
 -Output: F
 
 -All 4 bottom multiplexers have selects: S0 and S1 and the top multiplexer has selects: S2 and S3
-- HHH
+-I0 to I3 - inputs of 1st multiplexer
+ I4 to I7 - inputs of 2nd multiplexer
+ I8 to I11 - inputs of 3rd multiplexer
+ I12 to I15 - inputs of 4th multiplexer
+
+-However, let's create signals for this just to make the multiplexer diagram easier(outputs and inputs at the same time)
+-O1 - output of 1st multiplexer
+ O2 - output of 2nd multiplexer
+ O3 - output of 3rd multiplexer
+ O4 - output of 4th multiplexer
+ (O means out like I means in)
