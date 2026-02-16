@@ -16,28 +16,28 @@ architecture behavioural of three_to_eight_decoder_version_two is
 
   begin 
 
-    Y0 <= '1' when (A = '0' and B = '0' and C = '0') else            --2^0 = 1 condition
+    Y0 <= '1' when (A2 = '0' and A1 = '0' and A0 = '0') else            --2^0 = 1 condition
           '0';
 
-    Y1 <= '1' when (A = '0' and B = '0' and C = '1') else            --2^1 = 2 condition 
+    Y1 <= '1' when (A2 = '0' and A1 = '0' and A0 = '1') else            --2^1 = 2 condition 
           '0';
 
-    Y2 <= '1' when (A = '0' and B = '1' and C = '0') else            --2^2 = 4 condition
+    Y2 <= '1' when (A2 = '0' and A1 = '1' and A0 = '0') else            --2^2 = 4 condition
           '0';
 
-    Y3 <= '1' when (A = '0' and B = '1' and C = '1') else            --2^3 = 8 condition
+    Y3 <= '1' when (A2 = '0' and A1 = '1' and A0 = '1') else            --2^3 = 8 condition
           '0';
 
-    Y4 <= '1' when (A = '1' and B = '0' and C = '0') else            --2^4 = 16 condition
+    Y4 <= '1' when (A2 = '1' and A1 = '0' and A0 = '0') else            --2^4 = 16 condition
           '0';
 
-    Y5 <= '1' when (A = '1' and B = '0' and C = '1') else            --2^5 = 32 condition
+    Y5 <= '1' when (A2 = '1' and A1 = '0' and A0 = '1') else            --2^5 = 32 condition
           '0';
 
-    Y6 <= '1' when (A = '1' and B = '1' and C = '0') else            --2^6 = 64 condition
+    Y6 <= '1' when (A2 = '1' and A1 = '1' and A0 = '0') else            --2^6 = 64 condition
           '0';
 
-    Y7 <= '1' when (A = '1' and B = '1' and C = '1') else            --2^7 = 128 condition
+    Y7 <= '1' when (A2 = '1' and A1 = '1' and A0 = '1') else            --2^7 = 128 condition
           '0';
 
 end behavioural;
