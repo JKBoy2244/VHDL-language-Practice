@@ -6,6 +6,11 @@
 
 -Outputs: A2, A1, A0
 
+-Also, furthermore, for the 8 to 3 decoder, this deduces that the inputs are all written in 3-bit form and the outputs are all written in 8-bit form. 
+
+-Hence, this satisfies the condition fact for this that: 2^input = output only for both input and output to be written in actual binary format
+
+
 -This corresponds to the truth table below
 
 ------------------------------------------------------------------------------------------
