@@ -3,9 +3,9 @@
 
 -----------------------------------------------------------------------------------------
 
--Outputs: Y7, Y6, Y5, Y4, Y3, Y2, Y1, Y0
+-Outputs: Y7, Y6, Y5, Y4, Y3, Y2, Y1, Y0  (letter Y replaces letter d each time)
 
--Inputs: A2, A1, A0
+-Inputs: A2, A1, A0  (letter A replaces letter i each time)
 
 -Also, furthermore, for the 3 to 8 decoder, this deduces that the inputs are all written in 3-bit form and the outputs are all written in 8-bit form. 
 
