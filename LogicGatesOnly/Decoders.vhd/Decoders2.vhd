@@ -1,7 +1,7 @@
 library IEEE;
 use IEEE.std_logic_1164.all;
 
-entity eight_to_three_decoder is 
+entity eight_to_three_decoder_version_two is 
 
   port  (
 
@@ -10,7 +10,7 @@ entity eight_to_three_decoder is
 
   );
 
-end eight_to_three_decoder;
+end eight_to_three_decoder_version_two;
 
 architecture behavioural of eight_to_three_decoder_version_two is 
 
