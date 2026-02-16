@@ -34,3 +34,9 @@
  O4 - output of 4th multiplexer
  
  (O means out like I means in)
+
+-As a result of this, this concludes for the top multiplexer.
+
+-Inputs: 01, 02, 03, 04
+-Selects: S2, S3
+-Output: F
