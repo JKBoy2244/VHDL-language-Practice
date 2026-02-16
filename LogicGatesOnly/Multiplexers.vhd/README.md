@@ -44,3 +44,6 @@
 -Selects: S2, S3
 
 -Output: F
+
+
+-To conclude, for this specific diagram, there are 15 inputs in total, 4 selectors in total and 1 output in total
