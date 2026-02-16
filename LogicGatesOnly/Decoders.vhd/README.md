@@ -1,10 +1,11 @@
-<img width="555" height="475" alt="image" src="https://github.com/user-attachments/assets/9af23b0a-2efb-4e20-aef2-0c0ea0f0aeba" />
+<img width="508" height="212" alt="image" src="https://github.com/user-attachments/assets/d15b0a4a-36ce-4648-8fe9-996f82c18ed4" />
+
 
 -----------------------------------------------------------------------------------------
 
--Inputs: Y7, Y6, Y5, Y4, Y3, Y2, Y1, Y0
+-Outputs: Y7, Y6, Y5, Y4, Y3, Y2, Y1, Y0
 
--Outputs: A2, A1, A0
+-Inputs: A2, A1, A0
 
 -Also, furthermore, for the 3 to 8 decoder, this deduces that the inputs are all written in 3-bit form and the outputs are all written in 8-bit form. 
 
