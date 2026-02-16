@@ -1,18 +1,18 @@
 library IEEE;
 use IEEE.std_logic_1164.all;
 
-entity eight_to_three_decoder_version_two is 
+entity three_to_eight_decoder_version_two is 
 
   port  (
 
-    Y7, Y6, Y5, Y4, Y3, Y2, Y1, Y0 : in std_logic;   --All 7 inputs stated
-    A2, A1, A0 : out std_logic                       --All 3 inputs stated   (longer version code for this)
+    Y7, Y6, Y5, Y4, Y3, Y2, Y1, Y0 : out std_logic;   --All 7 outputs stated
+    A2, A1, A0 : in std_logic                         --All 3 inputs stated   (longer version code for this)
 
   );
 
-end eight_to_three_decoder_version_two;
+end three_to_eight_decoder_version_two;
 
-architecture behavioural of eight_to_three_decoder_version_two is 
+architecture behavioural of three_to_eight_decoder_version_two is 
 
   begin 
 
