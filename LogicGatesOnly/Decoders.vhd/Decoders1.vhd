@@ -5,8 +5,8 @@ entity three_to_eight_decoder is
 
   port (
 
-    Y : in std_logic_vector(7 downto 0);  --Instead of writing all Y7 to Y0, it's much easier and more efficient to write Y only including 7 downto 0 vector since there's 8 (Y) inputs in total anyways from Y7 to Y0
-    A : out std_logic_vector(2 downto 0)  --Exact similar thing for A, 3 (A) outputs in total from A2 to A0 so write A instead of A2 to A0 individually
+    Y : out std_logic_vector(7 downto 0);  --Instead of writing all Y7 to Y0, it's much easier and more efficient to write Y only including 7 downto 0 vector since there's 8 (Y) inputs in total anyways from Y7 to Y0
+    A : in std_logic_vector(2 downto 0)  --Exact similar thing for A, 3 (A) outputs in total from A2 to A0 so write A instead of A2 to A0 individually
 
   );
 
