@@ -8,7 +8,9 @@
 
 
 -Inputs: I0, I1, I2, I3, I4, I5, I6, I7, I8, I9, I10, I11, I12, I13, I14, I15
+
 -Selects: S0, S1, S2, S3
+
 -Output: F
 
 
@@ -38,5 +40,7 @@
 -As a result of this, this concludes for the top multiplexer.
 
 -Inputs: 01, 02, 03, 04
+
 -Selects: S2, S3
+
 -Output: F
