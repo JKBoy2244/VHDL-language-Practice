@@ -37,7 +37,7 @@ architecture behavioural of ripple_adder_port_map is
     
             a => A(0),          -- This maps component a of a full adder to A(0) as one input of full adder 0
             b => not B(0),          -- This maps component b of a full adder to B(0) as one input of full adder 0
-            c_in => C_in,       -- This maps component c_in of a full adder to C_in as one input of full adder 0
+            c_in => '1',       -- This maps component c_in of a full adder to C_in as one input of full adder 0
             s => S(0),          -- This maps component s of a full adder to S(0) as one output of full adder 0
             c_out => C(0)       -- This maps component c_out of a full adder to C(0) as one output of full adder 0
 
