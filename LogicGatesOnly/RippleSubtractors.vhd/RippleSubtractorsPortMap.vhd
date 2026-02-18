@@ -1,20 +1,19 @@
 library IEEE;
 use IEEE.std_logic_1164.all;
 
-entity ripple_adder_port_map is
+entity ripple_subtractor_port_map is
 
   port (
 
     A, B : in std_logic_vector(3 downto 0);  --Inputs for A and B (the reason for vector 3 downto 0 is because there's 4 sets of each of A inputs and B inputs inside the entire 4-bit ripple adder)
-    C_in : in std_logic;  --The carry input of the 4-bit ripple adder (it's the only one)
     S : out std_logic_vector(3 downto 0);  --Inputs for S (sum) (the reason again for vector 3 downto 0 is because there's also 4 sets of S outputs across the enture 4-bit ripple adder)
     C_out : out std_logic  --The carry output of the 4-bit ripple adder (it's the only one)
 
   );
 
-end ripple_adder_port_map;
+end ripple_subtractor_port_map;
 
-architecture behavioural of ripple_adder_port_map is
+architecture behavioural of ripple_subtractor_port_map is
 
   component full_adder is --As the ripple adder consists of 4 identical full adders which are connected with each other, this component represents a sample of 1 full adder within the 4 full adders combined of a ripple adder for easier mapping.
 
