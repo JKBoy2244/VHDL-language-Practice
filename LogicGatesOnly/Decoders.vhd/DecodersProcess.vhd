@@ -11,16 +11,23 @@ entity three_to_eight_decoder_proc is
   );
 
 
-end three_to_eight_decoder_proc
+end three_to_eight_decoder_proc;
 
 architecture behavioural of three_to_eight_decoder_proc is 
 
   begin
 
-  three_to_eight_decoder_process: process (A2, A1, AO)
+  three_to_eight_decoder_process: process (A2, A1, A0)
     begin
 
-    Y7, Y6, Y5, Y4, Y3, Y2, Y1, Y0 <= 0;
+    Y7 <= '0';
+    Y6 <= '0';
+    Y5 <= '0';
+    Y4 <= '0';
+    Y3 <= '0';
+    Y2 <= '0';
+    Y1 <= '0';
+    Y0 <= '0';
 
     if (A2 = '0' and A1 = '0' and A0 = '0') then
       Y0 <= '1';
@@ -38,6 +45,7 @@ architecture behavioural of three_to_eight_decoder_proc is
       Y6 <= '1';
     elsif (A2 = '1' and A1 = '1' and A0 = '1') then
       Y7 <= '1';
+    end if;
 
-  end three_to_eight_decoder_process;
+  end process three_to_eight_decoder_process;
 end behavioural;
