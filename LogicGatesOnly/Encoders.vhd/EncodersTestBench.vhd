@@ -25,16 +25,35 @@ architecture behavioural of encoders_testbench is
    begin
 
      Y7 <= '1'; Y6 <= '0'; Y5 <= '0'; Y4 <= '0'; Y3 <= '0'; Y2 <= '0'; Y1 <= '0'; Y0 <= '0'; wait for 10 ns;
-     Y7 <= '0'; Y6 <= '1'; Y5 <= '0'; Y4 <= '0'; Y3 <= '0'; Y2 <= '0'; Y1 <= '0'; Y0 <= '0'; wait for 10 ns;    --All the possible test case inputs
+     assert A2 = '1' and A1 = '1' and A0 = '1' report "(Y7 <= '1'; Y6 <= '0'; Y5 <= '0'; Y4 <= '0'; Y3 <= '0'; Y2 <= '0'; Y1 <= '0'; Y0 <= '0';) failed" severity error;
+       
+     Y7 <= '0'; Y6 <= '1'; Y5 <= '0'; Y4 <= '0'; Y3 <= '0'; Y2 <= '0'; Y1 <= '0'; Y0 <= '0'; wait for 10 ns;
+     assert A2 = '1' and A1 = '1' and A0 = '0' report "(Y7 <= '0'; Y6 <= '1'; Y5 <= '0'; Y4 <= '0'; Y3 <= '0'; Y2 <= '0'; Y1 <= '0'; Y0 <= '0';) failed" severity error;   --All the possible test case inputs
+                                                                     
      Y7 <= '0'; Y6 <= '0'; Y5 <= '1'; Y4 <= '0'; Y3 <= '0'; Y2 <= '0'; Y1 <= '0'; Y0 <= '0'; wait for 10 ns;
+     assert A2 = '1' and A1 = '0' and A0 = '1' report "(Y7 <= '0'; Y6 <= '0'; Y5 <= '1'; Y4 <= '0'; Y3 <= '0'; Y2 <= '0'; Y1 <= '0'; Y0 <= '0';) failed" severity error;
+       
      Y7 <= '0'; Y6 <= '0'; Y5 <= '0'; Y4 <= '1'; Y3 <= '0'; Y2 <= '0'; Y1 <= '0'; Y0 <= '0'; wait for 10 ns;
+     assert A2 = '1' and A1 = '0' and A0 = '0' report "(Y7 <= '0'; Y6 <= '0'; Y5 <= '0'; Y4 <= '1'; Y3 <= '0'; Y2 <= '0'; Y1 <= '0'; Y0 <= '0';) failed" severity error;
+       
      Y7 <= '0'; Y6 <= '0'; Y5 <= '0'; Y4 <= '0'; Y3 <= '1'; Y2 <= '0'; Y1 <= '0'; Y0 <= '0'; wait for 10 ns;
+     assert A2 = '0' and A1 = '1' and A0 = '1' report "(Y7 <= '0'; Y6 <= '0'; Y5 <= '0'; Y4 <= '0'; Y3 <= '1'; Y2 <= '0'; Y1 <= '0'; Y0 <= '0';) failed" severity error;
+       
      Y7 <= '0'; Y6 <= '0'; Y5 <= '0'; Y4 <= '0'; Y3 <= '0'; Y2 <= '1'; Y1 <= '0'; Y0 <= '0'; wait for 10 ns;
+     assert A2 = '0' and A1 = '1' and A0 = '0' report "(Y7 <= '0'; Y6 <= '0'; Y5 <= '0'; Y4 <= '0'; Y3 <= '0'; Y2 <= '1'; Y1 <= '0'; Y0 <= '0';) failed" severity error;
+       
      Y7 <= '0'; Y6 <= '0'; Y5 <= '0'; Y4 <= '0'; Y3 <= '0'; Y2 <= '0'; Y1 <= '1'; Y0 <= '0'; wait for 10 ns;
-     Y7 <= '0'; Y6 <= '0'; Y5 <= '0'; Y4 <= '0'; Y3 <= '0'; Y2 <= '0'; Y1 <= '0'; Y0 <= '1'; wait for 10 ns;
+     assert A2 = '0' and A1 = '0' and A0 = '1' report "(Y7 <= '0'; Y6 <= '0'; Y5 <= '0'; Y4 <= '0'; Y3 <= '0'; Y2 <= '0'; Y1 <= '1'; Y0 <= '0';) failed" severity error;
 
-     Y7 <= '0'; Y6 <= '0'; Y5 <= '0'; Y4 <= '0'; Y3 <= '0'; Y2 <= '0'; Y1 <= '0'; Y0 <= '0'; wait for 10 ns;   --Bottom 2 are actual edge cases to see what happens in unexpected situations
+     Y7 <= '0'; Y6 <= '0'; Y5 <= '0'; Y4 <= '0'; Y3 <= '0'; Y2 <= '0'; Y1 <= '0'; Y0 <= '1'; wait for 10 ns;
+     assert A2 = '0' and A1 = '0' and A0 = '0' report "(Y7 <= '0'; Y6 <= '0'; Y5 <= '0'; Y4 <= '0'; Y3 <= '0'; Y2 <= '0'; Y1 <= '0'; Y0 <= '1';) failed" severity error;
+
+     Y7 <= '0'; Y6 <= '0'; Y5 <= '0'; Y4 <= '0'; Y3 <= '0'; Y2 <= '0'; Y1 <= '0'; Y0 <= '0'; wait for 10 ns;       --Bottom 2 are actual edge cases to see what happens in unexpected situations
+     report "invalid inputs for an encoder" severity note;                                                         --Severity notes are only used for edge cases which are rarely used (so rare edge cases)
+       
      Y7 <= '1'; Y6 <= '1'; Y5 <= '0'; Y4 <= '0'; Y3 <= '0'; Y2 <= '0'; Y1 <= '0'; Y0 <= '1'; wait for 10 ns;
+     report "invalid inputs for an encoder" severity note;
+       
      wait;
    end process;
 end behavioural;
