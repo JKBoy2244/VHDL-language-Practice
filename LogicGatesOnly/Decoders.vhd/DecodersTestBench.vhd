@@ -25,13 +25,29 @@ architecture behavioural of decoders_testbench is
     begin
 
       A2 <= '0'; A1 <= '0'; A0 <= '0'; wait for 10 ns;
+      assert Y0 = '1' report "(A2 <= '0'; A1 <= '0'; A0 <= '0'; failed)" severity error;
+        
       A2 <= '0'; A1 <= '0'; A0 <= '1'; wait for 10 ns;
+      assert Y1 = '1' report "(A2 <= '0'; A1 <= '0'; A0 <= '1'; failed)" severity error;
+        
       A2 <= '0'; A1 <= '1'; A0 <= '0'; wait for 10 ns;
+      assert Y2 = '1' report "(A2 <= '0'; A1 <= '1'; A0 <= '0'; failed)" severity error;
+        
       A2 <= '0'; A1 <= '1'; A0 <= '1'; wait for 10 ns;
+      assert Y3 = '1' report "(A2 <= '0'; A1 <= '1'; A0 <= '1'; failed)" severity error;
+        
       A2 <= '1'; A1 <= '0'; A0 <= '0'; wait for 10 ns;
+      assert Y4 = '1' report "(A2 <= '1'; A1 <= '0'; A0 <= '0'; failed)" severity error;
+         
       A2 <= '1'; A1 <= '0'; A0 <= '1'; wait for 10 ns;
+      assert Y5 = '1' report "(A2 <= '1'; A1 <= '0'; A0 <= '1'; failed)" severity error;
+        
       A2 <= '1'; A1 <= '1'; A0 <= '0'; wait for 10 ns;
+      assert Y6 = '1' report "(A2 <= '1'; A1 <= '1'; A0 <= '0'; failed)" severity error;
+        
       A2 <= '1'; A1 <= '1'; A0 <= '1'; wait for 10 ns;
+      assert Y7 = '1' report "(A2 <= '1'; A1 <= '1'; A0 <= '1'; failed)" severity error;
+         
       wait;
    end process;
 end behavioural;
