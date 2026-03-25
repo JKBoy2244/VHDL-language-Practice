@@ -39,22 +39,26 @@ begin
    -- 1. Initialize Inputs with distinct values so we can track them
     I0  <= x"0000"; I1  <= x"1111"; I2  <= x"2222"; I3  <= x"3333";
     I4  <= x"4444"; I5  <= x"5555"; I6  <= x"6666"; I7  <= x"7777";
-    I8  <= x"8888"; I9  <= x"9999"; I10 <= x"AAAA"; I11 <= x"BBBB";
+    I8  <= x"8888"; I9  <= x"9999"; I10 <= x"AAAA"; I11 <= x"BBBB";    --Examples of sample inputs
     I12 <= x"CCCC"; I13 <= x"DDDD"; I14 <= x"EEEE"; I15 <= x"FFFF";
 
     -- 2. Test different select line combinations (S3 S2 S1 S0)
     
     -- Test Case 1: Select I0 (Binary: 0000) -> F should be x"0000"
     S3 <= '0'; S2 <= '0'; S1 <= '0'; S0 <= '0'; wait for 10 ns;
+    assert (F = x"0000") report "Test Case 1 Failed" severity error;
     
     -- Test Case 2: Select I5 (Binary: 0101) -> F should be x"5555"
     S3 <= '0'; S2 <= '1'; S1 <= '0'; S0 <= '1'; wait for 10 ns;
+    assert (F = x"5555") report "Test Case 2 Failed" severity error;
 
     -- Test Case 3: Select I10 (Binary: 1010) -> F should be x"AAAA"
     S3 <= '1'; S2 <= '0'; S1 <= '1'; S0 <= '0'; wait for 10 ns;
+    assert (F = x"AAAA") report "Test Case 3 Failed" severity error;
 
     -- Test Case 4: Select I15 (Binary: 1111) -> F should be x"FFFF"
     S3 <= '1'; S2 <= '1'; S1 <= '1'; S0 <= '1'; wait for 10 ns;
+    assert (F = x"FFFF") report "Test Case 4 Failed" severity error;
 
       
    wait;
