@@ -28,8 +28,14 @@ architecture behavioural of rippleAdders_testbench is
    begin
      
      A_0 <= '0'; A_1 <= '0';  A_2 <= '0';  A_3 <= '0';  B_0 <= '0';  B_1 <= '0';  B_2 <= '0';  B_3 <= '0';  C_in <= '0'; wait for 10 ns;
+     assert S3 = '0' and S2 ='0' and S1 = '0' and S0 = '0' and C_out= '0' report "Test Case 1 Failed: 0+0 should be 0" severity error;           --Just a few test cases since doing 2^8 combinations each would be too exhaustive
+       
      A_0 <= '1'; A_1 <= '0'; A_2 <= '0'; A_3 <= '0';  B_0 <= '1'; B_1 <= '0'; B_2 <= '0'; B_3 <= '0';  C_in <= '0'; wait for 10 ns;
-     A_0 <= '1'; A_1 <= '0'; A_2 <= '1'; A_3 <= '0';  B_0 <= '1'; B_1 <= '1'; B_2 <= '0'; B_3 <= '0';  C_in <= '0'; wait for 10 ns;   --Just a few test cases since doing 2^8 combinations each would be too exhaustive
+     assert S3 = '0' and S2 ='0' and S1 = '0' and S0 = '1' and C_out= '0' report "Test Case 2 Failed" severity error;
+       
+     A_0 <= '1'; A_1 <= '0'; A_2 <= '1'; A_3 <= '0';  B_0 <= '1'; B_1 <= '1'; B_2 <= '0'; B_3 <= '0';  C_in <= '0'; wait for 10 ns; 
+     assert S3 = '1' and S2 ='0' and S1 = '0' and S0 = '0' and C_out= '0' report "Test Case 3 Failed" severity error;       
+                                                                                                                                                         
      
      wait;
   end process;
