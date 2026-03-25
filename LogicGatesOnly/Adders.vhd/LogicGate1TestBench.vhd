@@ -25,13 +25,28 @@ architecture behavioural of test_bench is
     begin
 
       A <= '0'; B <= '0'; C_i <= '0'; wait for 10 ns;
+      assert C_o = '0' and S = '0' report "(A <= '0'; B <= '0'; C_i <= '0'; failed)" severity error;    --Each set of inputs are tested for every single combination individually and the assertion is for the expected outputs and severity error is if wrong output.
+
       A <= '0'; B <= '0'; C_i <= '1'; wait for 10 ns;
+      assert C_o = '0' and S = '1' report "(A <= '0'; B <= '0'; C_i <= '1'; failed)" severity error;
+
       A <= '0'; B <= '1'; C_i <= '0'; wait for 10 ns;
+      assert C_o = '0' and S = '1' report "(A <= '0'; B <= '1'; C_i <= '0'; failed)" severity error;
+
       A <= '0'; B <= '1'; C_i <= '1'; wait for 10 ns;
+      assert C_o = '1' and S = '0' report "(A <= '0'; B <= '1'; C_i <= '1'; failed)" severity error;
+
       A <= '1'; B <= '0'; C_i <= '0'; wait for 10 ns;
-      A <= '1'; B <= '0'; C_i <= '1'; wait for 10 ns;              
+      assert C_o = '0' and S = '1' report "(A <= '1'; B <= '0'; C_i <= '0'; failed)" severity error;
+
+      A <= '1'; B <= '0'; C_i <= '1'; wait for 10 ns;
+      assert C_o = '1' and S = '0' report "(A <= '1'; B <= '0'; C_i <= '1'; failed)" severity error;
+
       A <= '1'; B <= '1'; C_i <= '0'; wait for 10 ns;
+      assert C_o = '1' and S = '0' report "(A <= '1'; B <= '1'; C_i <= '0'; failed)" severity error;
+
       A <= '1'; B <= '1'; C_i <= '1'; wait for 10 ns;
+      assert C_o = '1' and S = '1' report "(A <= '1'; B <= '1'; C_i <= '1'; failed)" severity error;
     
       wait;
    end process;
