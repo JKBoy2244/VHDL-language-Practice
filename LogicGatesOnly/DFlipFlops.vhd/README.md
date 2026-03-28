@@ -8,7 +8,12 @@
 
 <img width="828" height="423" alt="image" src="https://github.com/user-attachments/assets/56d02395-1ce2-4aca-a69c-78f4658ccab4" />
 
--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+<img width="647" height="353" alt="image" src="https://github.com/user-attachments/assets/97a72640-a707-464b-b248-230ff065b141" />
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
 
 The first code part is just a code of only 1 D flip flop functionality. So essentially there, D and clk are inputs and Q are output (well Q' would also be an output too if only the diagram displayed it as an output shown by the line from it which it didn't have). Essentially, Q equals to D is rising edge clock occurs meaning that only the clock changes from 0 to 1 in other words low to high.
 
